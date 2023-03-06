@@ -15,3 +15,31 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRender");
 
+var managerCounter = 0;
+
+
+const teamMembers = {
+    Manager: [{
+            type: "input",
+            message: "What is the manager's name? ",
+            name: "managerName"
+        },
+        {
+            type: "input",
+            message: "What is the manager's id? ",
+            name: "managerId"
+        },
+
+        {
+            type: "input",
+            message: "What is the manager's email? ",
+            name: "managerEmail"
+        },
+        {
+            type: "input",
+            message: "What is the manager's office number? ",
+            name: "officeNumber"
+
+        }
+    ],
+}
