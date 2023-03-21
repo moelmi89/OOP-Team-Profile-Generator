@@ -16,15 +16,15 @@ const initialQuestions = () => {
         .prompt(firstQuestions)
         .then((response) => {    
             switch(response.selection) {
-                case 'Add Manager':
+                case 'Add manager':
                     ManagerQuestions()
                 break;
     
-                case 'Add Engineer':
+                case 'Add engineer':
                     EngineerQuestions()
                 break;
                 
-                case 'Add Intern':
+                case 'Add intern':
                     InternQuestions()
                 break;
     
