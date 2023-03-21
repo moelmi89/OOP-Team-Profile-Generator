@@ -5,7 +5,7 @@ const firstQuestions = [{
     type: 'list',
     message: 'What would you like to do next?',
     name: 'selection',
-    choices: ['Add manager', 'Add engineer', 'Add intern'],
+    choices: ['Add manager', 'Add engineer', 'Add intern', 'Finish building team'],
 }
 ];
 

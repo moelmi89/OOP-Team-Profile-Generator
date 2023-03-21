@@ -9,28 +9,28 @@ const teamMembers = (managers,engineers,interns) => {
         let engineerHtml = "";
         engineers.forEach(engineer => {
             engineerHtml += `<div class="card">
-                <h2>${engineer.name}</h2>
-                <p>Employee Id: ${engineer.id}</p>
-                <p>E-mail: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-                <p>Github: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></p>
+                <h2>${engineer.getName()}</h2>
+                <p>Employee Id: ${engineer.getId()}</p>
+                <p>E-mail: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
+                <p>Github: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></p>
         </div>`;
         })
         let internHtml = "";
         interns.forEach(intern => {
             internHtml += `<div class="card">
-                <h2>${intern.name}</h2>
-                <p>Employee Id: ${intern.id}</p>
-                <p>E-mail: <a href="mailto:${intern.email}">${intern.email}</a></p>
-                <p>School: ${intern.school}</p>
+                <h2>${intern.getName()}}</h2>
+                <p>Employee Id: ${intern.getId()}</p>
+                <p>E-mail: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></p>
+                <p>School: ${intern.getSchool()}</p>
         </div>`;
         })
         let managerHtml = "";
         managers.forEach(manager => {
             managerHtml += `<div class="card">
-                <h2>${manager.name}</h2>
-                <p>Employee Id: ${manager.id}</p>
-                <p>E-mail: <a href="mailto:${manager.email}">${manager.email}</a></p>
-                <p>Office Number: ${manager.officeNumber}</p>
+                <h2>${manager.getName()}}</h2>
+                <p>Employee Id: ${manager.getId()}</p>
+                <p>E-mail: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></p>
+                <p>Office Number: ${manager.getofficeNumber()}</p>
         </div>`;
         })
 

@@ -5,9 +5,9 @@ const Manager = require('../lib/Manager');
 const Engineer = require("../lib/Engineer");
 const Intern = require("../lib/Intern");
 
-managers = [];
-engineers = [];
-interns = [];
+var managers = [];
+var engineers = [];
+var interns = [];
 
 const {firstQuestions, engQuestions, intQuestions, manQuestions} = require("./questions");
 
@@ -51,7 +51,7 @@ const initialQuestions = () => {
         inquirer
             .prompt(engQuestions)
             .then((response) => {
-                const engineer = new Engineer(reponse.name, reponse.id, reponse.email, reponse.github)
+                const engineer = new Engineer(response.name, response.id, response.email, response.github)
                 engineers.push(engineer);
                 
                 initialQuestions();
@@ -62,7 +62,7 @@ const initialQuestions = () => {
         inquirer
             .prompt(intQuestions)
             .then((response) => {
-                const intern = new Intern(reponse.name, reponse.id, reponse.email, reponse.school)
+                const intern = new Intern(response.name, response.id, response.email, response.school)
                 interns.push(intern);
             
                 initialQuestions();
