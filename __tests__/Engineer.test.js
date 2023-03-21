@@ -7,7 +7,7 @@ describe("Engineer", () => {
             const id = 1;
             const name = "Andy"
             const email = "test@test.com";
-            const github = "@testandy";
+            const github = "testandy";
             const role = "Engineer";
 
             const obj = new Engineer(id, name, email, github);
@@ -21,7 +21,7 @@ describe("Engineer", () => {
             expect(obj.getName()).toEqual(name);
             expect(obj.getEmail()).toEqual(email);
             expect(obj.getRole()).toEqual(role);
-            expect(obj.getGitHub()).toEqual(github);
+            expect(obj.getGithub()).toEqual(github);
      });
     });
 });

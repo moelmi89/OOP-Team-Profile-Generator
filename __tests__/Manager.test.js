@@ -1,4 +1,4 @@
-const Engineer = require("../lib/Manager");
+const Manager = require("../lib/Manager");
 
 describe("Manager", () => {
     describe("Initialization", () => {
@@ -7,10 +7,10 @@ describe("Manager", () => {
             const id = 1;
             const name = "Andy"
             const email = "test@test.com";
-            const github = "@testandy";
-            const role = "Engineer";
+            const officenumber = "1";
+            const role = "Manager";
 
-            const obj = new Engineer(id, name, email, github);
+            const obj = new Manager(id, name, email, officenumber);
 
             expect(obj.id).toEqual(id);
             expect(obj.name).toEqual(name);
