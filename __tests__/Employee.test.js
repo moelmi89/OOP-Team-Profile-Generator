@@ -6,7 +6,7 @@ describe("Employee", () => {
 
             const id = 10;
             const name = "Andy"
-            const email = "Andy@test.com";
+            const email = "Andy@company.com";
             const role = "Employee";
 
             const obj = new Employee(id, name, email);

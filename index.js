@@ -1,3 +1,3 @@
-const startQuestions = require ('./src/startQuestions')
+const startQuestions = require ('./src/startQuestions');
 
 startQuestions();
