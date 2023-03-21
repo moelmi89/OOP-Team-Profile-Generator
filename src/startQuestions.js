@@ -9,13 +9,13 @@ managers = [];
 engineers = [];
 interns = [];
 
-const Questions = require("./questions");
+const {firstQuestions, engQuestions, intQuestions, manQuestions} = require("./questions");
 
 const initialQuestions = () => {
     inquirer
-        .prompt(Questions.startQuestions)
+        .prompt(firstQuestions)
         .then((response) => {    
-            switch(response.choice) {
+            switch(response.selection) {
                 case 'Add Manager':
                     ManagerQuestions()
                 break;
@@ -38,7 +38,7 @@ const initialQuestions = () => {
 
     const ManagerQuestions = () => {
         inquirer
-            .prompt(Questions.ManagerQuestions)
+            .prompt(manQuestions)
             .then((response) => {
                 const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
                 managers.push(manager);
@@ -49,18 +49,18 @@ const initialQuestions = () => {
 
     const EngineerQuestions = () => {
         inquirer
-            .prompt(Questions.EngineerQuestions)
+            .prompt(engQuestions)
             .then((response) => {
                 const engineer = new Engineer(reponse.name, reponse.id, reponse.email, reponse.github)
                 engineers.push(engineer);
                 
-                startMainQuestions();
+                initialQuestions();
         })
     };
 
     const InternQuestions = () => {
         inquirer
-            .prompt(Questions.InternQuestions)
+            .prompt(intQuestions)
             .then((response) => {
                 const intern = new Intern(reponse.name, reponse.id, reponse.email, reponse.school)
                 interns.push(intern);

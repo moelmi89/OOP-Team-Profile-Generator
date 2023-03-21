@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const firstQuestions = [{
     type: 'list',
-    message: 'What would you like ot do next?',
+    message: 'What would you like to do next?',
     name: 'selection',
     choices: ['Add manager', 'Add engineer', 'Add intern'],
 }
